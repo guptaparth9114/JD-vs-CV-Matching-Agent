@@ -1,22 +1,25 @@
+import { Buffer } from "node:buffer";
+
 // Text extraction utilities for PDF and DOCX files
 export class TextExtractor {
   static async extractFromPDF(buffer: Buffer): Promise<string> {
     try {
+      // In a real implementation, use pdf-parse or similar
       const text = `
         PARTH GUPTA
         Senior Software Engineer
-        
+
         EXPERIENCE:
         • 5+ years of full-stack development experience
         • Proficient in React, Node.js, TypeScript, Python
         • Experience with AWS, Docker, Kubernetes
         • Led team of 4 developers on e-commerce platform
         • Implemented CI/CD pipelines using GitHub Actions
-        
+
         SKILLS:
         JavaScript, TypeScript, React, Node.js, Python, AWS, Docker, 
         Kubernetes, PostgreSQL, MongoDB, Git, Agile, Scrum
-        
+
         EDUCATION:
         Bachelor of Technology in Computer Science - Jaypee Institute of Information Technology
       `;
@@ -29,22 +32,21 @@ export class TextExtractor {
   static async extractFromDOCX(buffer: Buffer): Promise<string> {
     try {
       // In a real implementation, you would use mammoth or similar
-      // For demo purposes, we'll simulate DOCX text extraction
       const text = `
         HIMMAT SINGH
         Frontend Developer
-        
+
         EXPERIENCE:
         • 3 years of frontend development experience
         • Expert in React, Vue.js, HTML5, CSS3, JavaScript
         • Experience with responsive design and mobile-first approach
         • Built 10+ production web applications
         • Collaborated with UX/UI designers and backend developers
-        
+
         SKILLS:
         HTML5, CSS3, JavaScript, React, Vue.js, Sass, Webpack, 
         Git, Figma, Adobe Creative Suite, Responsive Design
-        
+
         EDUCATION:
         Bachelor of Technology in Computer Science - Jaypee Institute of Information Technology
       `;

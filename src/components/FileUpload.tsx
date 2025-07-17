@@ -71,8 +71,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
 
     setUploadProgress(progress);
 
-    // Simulate processing
-    validFiles.forEach((file, index) => {
+    validFiles.forEach((_, index) => {
       setTimeout(() => {
         setUploadProgress((prev) =>
           prev.map((p, i) =>
