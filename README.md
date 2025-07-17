@@ -2,6 +2,12 @@
 
 A comprehensive AI-powered resume matching system that ranks candidates against job descriptions using advanced NLP and skill extraction algorithms.
 
+## 🚀 Demo Screenshot
+
+![App Screenshot](./assets/SS-1.png)
+
+<!-- ![App Screenshot](./assets/screenshot.png) -->
+
 ## 🚀 Features
 
 - **Intelligent Matching**: Multi-factor scoring algorithm with skills, experience, and contextual analysis
