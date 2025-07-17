@@ -22,10 +22,7 @@ export class MockMatchingService {
 
   static async processResume(file: File): Promise<Resume> {
     const buffer = await file.arrayBuffer();
-    const content = await TextExtractor.extractText(
-      Buffer.from(buffer),
-      file.type
-    );
+    const content = await TextExtractor.extractText(buffer, file.type);
 
     const extractedSkills = SkillExtractor.extractSkills(content);
     const extractedExperience = SkillExtractor.extractExperience(content);

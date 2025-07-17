@@ -1,57 +1,253 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Custom scrollbar styles */
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #a8a8a8;
-}
-
-/* Smooth transitions for all elements */
+/* RESET & GLOBAL */
 * {
-  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Use Tailwind classes in JSX for ring effects instead of invalid CSS properties */
-
-/* Animation classes */
-.animate-fade-in {
-  animation: fadeIn 0.5s ease-in-out;
+body {
+  background-color: #f9fafb;
+  color: #1f2937;
 }
 
-.animate-slide-up {
-  animation: slideUp 0.3s ease-out;
+/* CONTAINER */
+.app-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
+/* HEADER */
+.header {
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 1.2rem;
+  margin-bottom: 2.5rem;
+  background-color: #eef2ff;
+  border-radius: 0.75rem;
+  padding-top: 1.2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.icon-wrapper {
+  background-color: #facc15;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+}
+
+.app-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.app-subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 0.65rem 1.3rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.btn.green {
+  background-color: #22c55e;
+  color: white;
+}
+
+.btn.green:hover {
+  background-color: #16a34a;
+}
+
+.btn.gray {
+  background-color: #d1d5db;
+  color: #111827;
+}
+
+.btn.gray:hover {
+  background-color: #cbd5e1;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* MATCH BUTTON */
+.match-btn-wrapper {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.match-btn {
+  background-color: #2563eb;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.match-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* SPINNER */
+.spinner {
+  border: 3px solid #e5e7eb;
+  border-top: 3px solid white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
   to {
-    opacity: 1;
+    transform: rotate(360deg);
   }
 }
 
-@keyframes slideUp {
-  from {
-    transform: translateY(10px);
-    opacity: 0;
+/* BANNER SECTION */
+.features-banner {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.banner-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: #1e3a8a;
+}
+
+/* FEATURES */
+.features-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  max-width: 300px;
+  background-color: #f8fafc;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.feature-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.feature-icon.yellow {
+  color: #facc15;
+}
+.feature-icon.green {
+  color: #22c55e;
+}
+.feature-icon.blue {
+  color: #3b82f6;
+}
+
+/* GRID LAYOUT */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+/* RESUME UPLOAD SECTION */
+.resume-upload {
+  padding: 1.25rem;
+  background-color: #f3f4f6;
+  border-radius: 0.75rem;
+}
+
+.section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: #1e40af;
+}
+
+/* RESUME INFO */
+.resume-info {
+  margin-top: 1rem;
+  color: #374151;
+}
+
+.resume-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+
+.resume-tag {
+  background-color: #e5e7eb;
+  padding: 0.5rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
   }
-  to {
-    transform: translateY(0);
-    opacity: 1;
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .header-right {
+    margin-top: 1rem;
+  }
+
+  .features-grid {
+    justify-content: flex-start;
   }
 }

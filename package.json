@@ -1,37 +1,45 @@
 {
-  "name": "jd-vs-cv-matching-agent",
+  "name": "jd-cv-matching-agent",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "AI-powered JD vs CV matching system with intelligent candidate ranking",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@supabase/supabase-js": "^2.51.0",
-    "cors": "^2.8.5",
-    "express": "^5.1.0",
-    "lucide-react": "^0.525.0",
-    "mammoth": "^1.9.1",
-    "multer": "^2.0.1",
-    "openai": "^5.10.1",
-    "pdf-parse": "^1.1.1",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "uuid": "^11.1.0",
-    "vite": "^7.0.5"
+    "lucide-react": "^0.344.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.19",
-    "@types/multer": "^2.0.0",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
-    "@types/uuid": "^10.0.0",
-    "@vitejs/plugin-react": "^4.6.0",
+    "@eslint/js": "^9.9.1",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.21",
+    "eslint": "^9.9.1",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.11",
+    "globals": "^15.9.0",
     "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.11"
-  }
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.3.0",
+    "vite": "^5.4.2"
+  },
+  "keywords": [
+    "resume-matching",
+    "job-description",
+    "ai-powered",
+    "candidate-ranking",
+    "nlp",
+    "skill-extraction",
+    "react",
+    "typescript"
+  ],
+  "author": "JD vs CV Matching System",
+  "license": "MIT"
 }
