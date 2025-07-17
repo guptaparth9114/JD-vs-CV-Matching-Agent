@@ -5,8 +5,7 @@ A comprehensive AI-powered resume matching system that ranks candidates against 
 ## 🚀 Demo Screenshot
 
 ![App Screenshot](./assets/SS-1.png)
-
-<!-- ![App Screenshot](./assets/screenshot.png) -->
+![App Screenshot](./assets/Screenshot 2025-07-17 191554.png)
 
 ## 🚀 Features
 
